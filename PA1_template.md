@@ -74,6 +74,7 @@ nincomplete <- sum(!complete.cases(data))
 ```
 Number of incomplete rows: 2304.
 
+For imputing missing values, impute the mean value for steps by same intervals.
 
 ```r
 impute <- function(df){

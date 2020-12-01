@@ -450,6 +450,7 @@ maxint &lt;- with(timeseries,interval[steps==max(steps)])  ##Search interval wit
 <h2>Imputing missing values</h2>
 <pre class="r"><code>nincomplete &lt;- sum(!complete.cases(data))</code></pre>
 <p>Number of incomplete rows: 2304.</p>
+<p>For imputing missing values, impute the mean value for steps by same intervals.</p>
 <pre class="r"><code>impute &lt;- function(df){
   for(i in seq(1,nrow(df))){
     if(is.na(df[i,1])){
